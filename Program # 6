@@ -3,7 +3,7 @@
 # Program #6
 # COMS-170-01: Winter 2025
 # Due: 04/04/2025
-# Program # 6 - Write a program that can read a file to help calculate total sales and average sale price for Dylan's side hustle selling pokemon cards. 
+# Program # 6 - Write a program designed to read a provided file in order to help calculate total sales and average sale price for Dylan's side hustle selling Pokemon cards. 
 # ------------------------------------------------------------------
 # Variable              Type        Purpose
 # ------------------------------------------------------------------
@@ -33,6 +33,11 @@ def main():
             floatGrTotal, floatAvgSales = calc_total()
             print(f"Total sales are: ${floatGrTotal:.2f}")
             print(f"Average sales are: ${floatAvgSales:.2f}")
+        elif strChoice not in ["D","C","X"]:
+            print(ERROR: INVALID SELECTION. PLEASE TRY AGAIN!")
+            continue
+        else:
+            print("See you next time!")
             
 def display_card_sales():
     try:
