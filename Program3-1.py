@@ -16,15 +16,15 @@ intCredits = int(input("Enter number of credits completed:"))
 # Perform calculations and operations
 if intCredits < 0:
     print("ERROR: Negative credits entered")
-elif intCredits > 0 and intCredits < 30:
+elif intCredits >= 0 and intCredits < 30:
     print("FRESHMAN: Welcome to MUCSOCS")
-elif intCredits > 30 and intCredits < 60:
+elif intCredits >= 30 and intCredits < 60:
     print("SOPHOMORE: You're making progress")
-elif intCredits > 60 and intCredits < 90:
+elif intCredits >= 60 and intCredits < 90:
     print("JUNIOR: Getting close. Don't give up now.")
-elif intCredits > 90 and intCredits < 120:
+elif intCredits >= 90 and intCredits < 120:
     print("SENIOR: Almost done!")
-elif intCredits > 120:
+elif intCredits >= 120:
     print("Welcome to MUCSOCS Alumni Association")
 # Display output to user
 
