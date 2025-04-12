@@ -30,7 +30,7 @@ def get_times():
                 completion_times.append(floatVal)
         except ValueError:
             print("Invalid input. Please enter numeric values only.")
-            except Exception:
+        except Exception:
                 print("An unexpected error occurred.")
     return completion_times
 
@@ -47,9 +47,11 @@ def display_reults(times, floatFast, floatSlow, floatAvg):
     print(f"The fastest completion time is: {floatFast:.2f} seconds")
     print(f"The slowest completion time is: {floatSlow:.2f} seconds")
     print(f"The average completion time is: {floatAvg:.2f} seconds")
+    print("------------------------------------------------------------------")
     print("All completion times are:")
     for time in times:
         print(f"{time:.2f} seconds")
+    print("------------------------------------------------------------------")
 
 def main():
     try:
