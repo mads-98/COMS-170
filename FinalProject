@@ -1,0 +1,73 @@
+def main():
+    listOriginal = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '.', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    listEncoded = ['G', 'X', '3', 'K', 'P', '9', 'D', '6', 'N', '1', 'S', 'F', 'L', 'W', '2', 'T', 'A', 'Z', '5', 'Y', '0', 'M', 'C', '7', 'U', 'I', 'R', '8', 'E', '.', 'O', 'B', 'V', 'Q', 'H', '4', 'J']
+
+    strChoice = None
+
+    while strChoice != "3":
+        try:
+            print("\n")
+            print("\n")
+            print("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+            print("X                                    X")
+            print("X          CONTENT SECURITY          X")
+            print("X          CIPHER TRANSLATOR         X")
+            print("X                                    X")
+            print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+            print("\n*******************MENU*******************")
+            print("*                                        *")
+            print("*  CHOOSE ONE OF THE FOLLOWING OPTIONS:  *")
+            print("*      1. encode a message               *")
+            print("*      2. decode a message               *")
+            print("*      3. exit                           *")
+            print("*                                        *")
+            print("******************************************")
+            strChoice = input("\nENTER YOUR SELECTION (1, 2, or 3)... ").strip()
+
+            if strChoice == "1":
+                print("\n--------------------")
+                print("encoding a message...")
+                print("---------------------")
+                strMessage = input("\nenter the message you wish to encode: ").upper()
+                strEncodedMessage = ""
+                for char in strMessage:
+                    if char in listOriginal:
+                        intIndex = listOriginal.index(char)
+                        strEncodedMessage += listEncoded[intIndex]
+                    else:
+                        strEncodedMessage += char
+                print("\n==========================================================")
+                print("translated message (encoded)...", "\n", strEncodedMessage)
+                print("===========================================================")
+
+            elif strChoice == "2":
+                print("\n--------------------")
+                print("decoding a message...")
+                print("---------------------")
+                strMessage = input("\nEnter the message you wish to decode: ").upper()
+                strDecodedMessage = ""
+                for char in strMessage:
+                    if char in listEncoded:
+                        intIndex = listEncoded.index(char)
+                        strDecodedMessage += listOriginal[intIndex]
+                    else:
+                        strDecodedMessage += char
+                print("\n==========================================================")
+                print("   translated message (decoded)...", "\n", strDecodedMessage)
+                print("===========================================================")
+
+            elif strChoice == "3":
+                print("\n==========================")
+                print("exiting program... GOODBYE!")
+                print("===========================")
+            else:
+                print("\n================================================")
+                print("   INVALID CHOICE. Please enter 1, 2, or 3.")
+                print("=================================================")
+
+        except Exception:
+            print("\n================================================")
+            print(" AN UNEXPECTED ERROR OCCURRED. Please try again.")
+            print("=================================================")
+
+main()
