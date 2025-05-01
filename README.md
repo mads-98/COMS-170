@@ -21,4 +21,6 @@ Program Objectives are as follows:
   
   Program8.py - modifies sentences entered to have the first letter capitalized
 
+  FinalProject - program a cipher translator to be ued to increase data security
+
   
